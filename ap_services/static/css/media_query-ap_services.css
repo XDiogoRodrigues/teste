@@ -1,0 +1,13 @@
+@media (max-width: 1180px) {
+    .container-desktop {
+        display: none;
+    }
+
+    .container-mobile {
+        display: flex;
+    }
+
+    .container-login {
+        margin-top: 0px;
+    }
+}
