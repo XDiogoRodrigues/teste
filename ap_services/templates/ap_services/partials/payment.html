@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block jquery %}<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>{% endblock %}
+{% block script %}<script src="{% static 'js/script-ap_services.js' %}" defer></script>{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/styles-ap_services.css' %}">{% endblock %}
+{% block media %}<link rel="stylesheet" href="{% static 'css/media_query-ap_services.css' %}">{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="container-payment mt-5 p-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12 container-payment-data">
+                <h1 class="mb-4 title-payment">Finalizar compra</h1>
+
+                <div class="container-payment-description d-flex">
+                    <p class="fs-5">Forma de pagamento</p>
+                    <p class="fs-5 fw-bold">Seguro e criptografado <i class="bi bi-lock-fill fs-4"></i></p>
+                </div>
+               
+                <div class="container-fluid container-payment-form pe-2">
+                    <div class="form-check pt-2 pb-2 border">
+                        <div class="container-form-payment d-flex align-items-center">
+                             &nbsp;&nbsp;<input class="form-check-input" type="radio" name="flexRadioDefault" id="pix">
+                            <label class="form-check-label" for="pix">
+                           <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/pix.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;Pix</p>
+                            </label>
+                        </div>
+
+                        <div class="container-data-payment-form-pix mt-3">
+                            <div class="container-fluid">
+                                <div class="col-12 mb-3">
+                                    <label for="number" class="mb-2 fw-bold">CPF/CNPJ</label>
+                                    <input type="number" name="number" id="number" class="form-control mb-3" placeholder="1234 5678 9012 3456">
+                                    <p class="text-secondary">Para concluir sua transação, redirecionaremos você para os servidores seguros do dLocal.</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-check pt-2 pb-2 border">
+                        <div class="container-form-payment d-flex align-items-center">
+                            &nbsp;&nbsp;<input class="form-check-input " type="radio" name="flexRadioDefault" id="card">
+                            <label class="form-check-label" for="card">
+                                <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/card-default.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;Cards</p>
+                            </label>
+                        </div>
+
+                        <div class="container-data-payment-form-card mt-3">
+                            <div class="container-fluid">
+                                <div class="col-12 mb-3">
+                                    <label for="number" class="mb-2 fw-bold">Número do cartão</label>
+                                    <input type="number" name="number" id="number" class="form-control" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nome" class="mb-2 fw-bold">Prazo</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="MM/AA">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="mb-2 fw-bold">CVC/CVV</label>
+                                        <input type="email" class="form-control" id="email" placeholder="CVC">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nome" class="mb-2 fw-bold">Nome no cartão</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Nome no cartão">
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+                                        <label for="email" class="mb-2 fw-bold">CPF/CNPJ</label>
+                                        <input type="email" class="form-control text-secondary" id="email" placeholder="CPF/CNPJ">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check ms-3 mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="card-salve">
+                                            <label class="form-check-label fs-5" for="card-salve">
+                                                &nbsp;&nbsp;Salvar esse cartão com segurança para minhas próximas compras
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>     
+                        </div>         
+                    </div>
+
+                    <div class="form-check d-flex align-items-center pt-2 pb-2 border">
+                        &nbsp;&nbsp;<input class="form-check-input " type="radio" name="flexRadioDefault" id="google">
+                        <label class="form-check-label" for="google">
+                           <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/card-google.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;Google Pay</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check pt-2 pb-2 border">
+                        <div class="container-form-payment d-flex align-items-center">
+                            &nbsp;&nbsp;<input class="form-check-input " type="radio" name="flexRadioDefault" id="boleto">
+                            <label class="form-check-label" for="boleto">
+                                <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/hpp-primeiropay-boleto.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;Boleto Bancário</p>
+                            </label>
+                        </div>
+
+                        <div class="container-data-payment-form-boleto mt-3">
+                            <div class="container-fluid">
+                                <div class="col-12 mb-3">
+                                    <label for="number" class="mb-2 fw-bold">CPF/CNPJ</label>
+                                    <input type="number" name="number" id="number" class="form-control mb-3" placeholder="1234 5678 9012 3456">
+                                    <p class="text-secondary">Para concluir sua transação, redirecionaremos você para os servidores seguros do dLocal.
+Após gerar o boleto, efetue o pagamento em até cinco dias antes do vencimento. Você poderá salvar o voucher ou acessá-lo pela página Histórico de pagamentos posteriormente.
+
+Quando o pagamento for confirmado, pode levar até 24 horas para que você receba acesso ao seu curso. Lembre-se também de que as compras feitas com boleto bancário só podem ser reembolsadas por meio de créditos da Udemy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+
+                    <div class="form-check d-flex align-items-center pt-2 pb-2 border">
+                        &nbsp;&nbsp;<input class="form-check-input " type="radio" name="flexRadioDefault" id="pay">
+                        <label class="form-check-label" for="pay">
+                           <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/hpp-paypal.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;PayPal</p>
+                        </label>
+                    </div>
+
+                    <div class="form-check pt-2 pb-2 border mb-3">
+                        <div class="container-form-payment d-flex align-items-center">
+                             &nbsp;&nbsp;<input class="form-check-input " type="radio" name="flexRadioDefault" id="mercado">
+                            <label class="form-check-label" for="mercado">
+                                <p class="fs-5 mb-0 mt-0">&nbsp;&nbsp;&nbsp;<img src="{% static 'images/images_payment/hpp-mercado-pago.svg' %}" alt="" class="border rounded-3" width="80px" height="50px">&nbsp;&nbsp;Mercado Pago</p>
+                            </label>
+                        </div>
+
+                        <div class="container-data-payment-form-mercado mt-3">
+                            <div class="container-fluid">
+                                <div class="col-12 mb-3">
+                                    <label for="number" class="mb-2 fw-bold">CPF/CNPJ</label>
+                                    <input type="number" name="number" id="number" class="form-control mb-3" placeholder="1234 5678 9012 3456">  
+                                    <p>Para concluir sua transação, redirecionaremos você para os servidores seguros do dLocal.</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    {% if quantity_courses > 1 %}
+                        <h4 class="mt-4">Detalhes do pedido ({{quantity_courses}} cursos)</h4>
+                    {% else %}
+                        <h4 class="mt-4">Detalhes do pedido ({{quantity_courses}} curso)</h4>
+                    {% endif %}
+                    
+                    <div class="container-payment-detail-buy mt-4">
+                        {% for course in courses %}
+                            <div class="container-course-detail align-items-center gap-5 d-flex mb-4 border p-3 rounded-3">
+                                <div class="container-payment-img-course d-flex gap-2 align-items-center flex-grow-1">
+                                    <img src="{% static 'images/images_language_programing/react.png' %}" alt="" class="border p-2 rounded-3" width="70px" height="70px">
+                                    <p class="fs-5">Curso React completo</p>
+                                </div>
+                                <p class="fs-5">R$ 205,90</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>             
+            </div>
+
+            <div class="col-md-5 col-12 container-payment-value rounded-3 ms-5 p-5 mb-5">
+                <h3>Resumo do pedido</h3>
+                <div class="container-payment-total d-flex justify-content-between mb-3" style="border-bottom: 1px solid rgb(203, 203, 203);">
+                    <p class="fs-5">Preço original:</p>
+                    <p class="fs-5 fw-bold">R$ 617,70</p>
+                </div>
+
+                <div class="container-other-total d-flex justify-content-between">
+                    <p class="fs-5 fw-bold"><span class="fw-bold">Total</span> ({{quantity_courses}} cursos):</p>
+                    <p class="fs-5 fw-bold">R$ 617,70</p>
+                </div>
+
+                <p class="fs-5 mt-3">Ao concluir sua compra, você concorda com estes
+                    <a href="#" class="text-decoration-none">Termos de Uso.</a>
+                </p>
+                
+                <button class="btn btn-subscribe w-100 mt-3"><i class="bi bi-lock-fill fs-4"></i> Prosseguir</button>
+
+                <h4 class="text-center mt-4">Garantia de devolução do dinheiro em 30 dias</h4>
+
+                <p class="text-center text-secondary">Não está contente? Receba um reembolso completo dentro de 30 dias. Simples e fácil! </p>
+            </div>
+        </div>       
+    </div>
+{% endblock %}

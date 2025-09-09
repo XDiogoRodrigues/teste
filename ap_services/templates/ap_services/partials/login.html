@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block jquery %}<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>{% endblock %}
+{% block script %}<script src="{% static 'js/script-ap_services.js' %}" defer></script>{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/styles-ap_services.css' %}">{% endblock %}
+{% block media %}<link rel="stylesheet" href="{% static 'css/media_query-ap_services.css' %}">{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/image-login.webp' %}" alt="" class="img-fluid img-service">
+            </div>
+
+            <div class="col-md-6 container-login">
+                <form action="" method="post" class="text-center p-3">
+                    {% csrf_token %}
+                    <fieldset>
+                        <h1 class="text-center mb-4">Faça login para continuar sua jornada de aprendizado</h1>
+                    </fieldset>
+                     <div class="form-floating mb-4">
+                        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" class="fw-bold">E-mail</label>
+                    </div>
+
+                     <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="password" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" class="fw-bold">Senha</label>
+                    </div>
+                    <input type="submit" value="Continuar com e-mail" class="btn-subscribe form-control">
+                </form>
+
+                <p class="text-center mt-3">Outras opções de login</p>
+
+                <div class="container-option-login d-flex justify-content-center gap-5">
+                    <img src="{% static 'images/images_actions_login/google.ico' %}" alt="" class="service p-2" width="50px" height="50px">
+                    <img src="{% static 'images/images_actions_login/face.ico' %}" alt=""  class=" service p-2" width="50px" height="50px">
+                    <img src="{% static 'images/images_actions_login/mac.ico' %}" alt=""  class=" service p-2 mb-3" width="50px" height="50px">
+                </div>
+                
+                <p class="text-center mt-5 fs-5">Não tem uma conta? <a href="{% url 'register' %}" class="link-login">Inscreva-se</a></p>
+                <hr>
+                <a href="#" class="d-block text-center fs-5 link-login">Faça login com sua organização</a>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

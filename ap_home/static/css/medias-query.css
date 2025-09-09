@@ -1,0 +1,24 @@
+@media (max-width: 1150px){
+
+     .col-12 {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+     }
+
+     /* Container desktop removido */
+     .container-desktop {
+          display: none;
+     }
+
+     /* Container mobile acrescentado */
+     .container-mobile {
+          display: block;
+     }
+
+     .img-banner {
+          width: 100%;
+          height: 230px;
+     }
+
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block jquery %}<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>{% endblock %}
+{% block script %}<script src="{% static 'js/script.js' %}" defer></script>{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/styles-ap_home.css' %}">{% endblock %}
+{% block media %}<link rel="stylesheet" href="{% static 'css/medias-query.css' %}">{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img src="{% static 'images/moca.png' %}" alt="" class=" img-banner">
+                    {% comment %} <div class="container-description-banner text-start bg-white">
+                        <h1>Economize 20% em um ano de aprendizado</h1>
+                        <p class="fs-5">Economize muito com acesso ilimitado a mais de 26.000 dos nossos cursos mais conceituados de tecnologia, negócios e muito mais. Consulte os termos aplicáveis.</p>
+                    </div> {% endcomment %}
+            </div> 
+        </div>
+    </div>
+    {% comment %} {% include 'ap_home/partials/sec-enterprise.html'%} {% endcomment %}
+    {% comment %} {% include 'ap_home/partials/sec-categories.html' %} {% endcomment %}
+{% endblock %}

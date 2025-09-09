@@ -1,0 +1,93 @@
+{% load static %}
+<div class="container-fluid">
+        <div class="row justify-content-center container-desktop">
+            <div class="col-12 d-flex align-items-center ">
+               <div class="container-logo-search ms-3 d-flex flex-grow-1 align-items-center">
+                    <a href="{% url 'home' %}"><img src="{% static 'images/logo-udemy.svg' %}" alt="logo-udemy" width="100px" height="80px"></a>
+                    {% if not user.is__authenticated %}
+                        <a href="#" class="fs-5 ms-3 text-decoration-none text-dark">Explorar</a>
+                    {% endif %}
+                    <form action="" method="post" class="flex-grow-1 ms-3 me-4 form-search" autocomplete="off">
+                        {% csrf_token %}
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Pesquisar qualquer coisa">
+                        <div class="container-search-word" id="container-search-desktop">
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"> </i><img src="{% static 'images/images_languages/java-96.png' %}" alt="" width="50px">Curso Java COMPLETO Programação Orientada a Objetos + Projetos</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/js-96.png' %}" alt="" width="50px">Curso JavaScript do básico ao avançado (c/ Node.js e projetos)</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/kotlin-96.png' %}" alt="" width="50px">Curso Desenvolvimento Android Completo - Kotlin & Java</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/react-96.png' %}" alt="" width="50px">Curso React do Zero a Maestria (c/ hooks, router, API, Projetos)</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/python-96.png' %}" alt="" width="50px">Curso de Python 3 do básico ao avançado - com projetos reais</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/c-96.png' %}" alt="" width="50px">Curso Programação em C do básico ao avançado</a>       
+                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/angular-96.png' %}" alt="" width="50px">Curso Angular 19 - Curso Completo do Iniciante ao Avançado (2025)</a>                     
+                        </div>
+                    </form>     
+               </div>
+
+               <div class="container-actions d-flex gap-3 align-items-center me-3">
+                    <a href="{% url 'to-teacher' %}" class="text-decoration-none text-dark text-action">Ensine na Udemy</a>
+                    <a href="{% url 'cart' %}"><i class="bi bi-cart3 text-dark fs-4"></i></a>
+                    <a href="{% url 'login' %}" class="btn-login">Fazer login</a>
+                    <a href="{% url 'register' %}" class="btn-subscribe">Inscreva-se</a>
+                    <a href="#" class="btn-login"><i class="bi bi-globe p-1 text-dark"></i></a>
+               </div>
+            </div>
+        </div>
+        
+        <header class="container-fluid container-mobile pt-2 mb-2 position-relative">
+            <nav>
+                <i class="bi bi-list list-items"></i>
+                <a href="{% url 'home' %}" class="img-icon"><img src="{% static 'images/logo-udemy.svg' %}" alt="logo-udemy" width="90px" height="80px"></a>
+                <div class="container-actions-mobile d-flex gap-1">
+                    <i class="bi bi-search search-items me-2"></i>
+                    <a href="{% url 'cart' %}"><i class="bi bi-cart3 cart-items text-decoration-none text-dark "></i></a>
+                </div>  
+            </nav> 
+        </header>
+
+        <div class="container-menu-mobile p-4">
+            <div class="container-mobile-me d-flex flex-column align-items-start mb-2">
+                <a href="{% url 'login' %}" class="fs-5 mb-2 text-decoration-none text-dark">Fazer login</a>
+                <a href="{% url 'register' %}" class="fs-5 mb-2 text-decoration-none text-dark">Inscreva-se</a>
+            </div>
+
+            <div class="container-mobile-me d-flex flex-column align-items-start mb-2">
+                <p class="fs-4 fw-bold">Mais populares</p>
+                <p class="fs-5">Desenvolvimento Web</p>
+                <p class="fs-5">Desenvolvimento móvel</p>
+                <p class="fs-5">Desenvolvimento de games</p>
+                <p class="fs-5">Empreendedorismo</p>
+                <p class="fs-5">Business Analytics</p>
+                <p class="fs-5">Finanças</p>
+                <p class="fs-5">Certificações de TI</p>
+                <p class="fs-5">Transformação pessoal</p>
+                <p class="fs-5">Design gráfico e ilustração</p>
+                <p class="fs-5">Marketing digital</p>
+                <p class="fs-5">Todas as categorias</p>
+            </div>
+
+            <div class="container-mobile-me d-flex flex-column align-items-start">
+                <p class="fs-4 fw-bold">Mais da Udemy</p>
+                <a href="{% url 'to-teacher' %}" class="text-decoration-none text-dark fs-5">Ensine na Udemy</a>
+                <p class="fs-5">Obtenha o aplicativo</p>
+                <p class="fs-5">Convidar amigos</p>
+                <p class="fs-5">Ajuda e suporte</p>
+            </div>
+        </div>
+
+        <form action="" method="post" class="flex-grow-1 ms-3 me-4 form-search form-search-mobile" id="form-search-mobile" autocomplete="off">
+            {% csrf_token %}
+            <div class="container-search-mobile">
+                <input type="search" name="search" id="search-mobile" class="form-control" placeholder="Pesquisar qualquer coisa">
+                <i class="bi bi-x-circle fs-3 btn-close-mobile"></i>
+            </div> 
+            <div class="container-search-word" id="container-search-mobile">
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"> </i><img src="{% static 'images/images_languages/java-96.png' %}" alt="" width="50px">Curso Java COMPLETO Programação Orientada a Objetos + Projetos</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/js-96.png' %}" alt="" width="50px">Curso JavaScript do básico ao avançado (c/ Node.js e projetos)</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/kotlin-96.png' %}" alt="" width="50px">Curso Desenvolvimento Android Completo - Kotlin & Java</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/react-96.png' %}" alt="" width="50px">Curso React do Zero a Maestria (c/ hooks, router, API, Projetos)</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/python-96.png' %}" alt="" width="50px">Curso de Python 3 do básico ao avançado - com projetos reais</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/c-96.png' %}" alt="" width="50px">Curso Programação em C do básico ao avançado</a>       
+                <a href="#" class="text-decoration-none text-dark"><i class="bi bi-search fs-5 me-2"></i><img src="{% static 'images/images_languages/angular-96.png' %}" alt="" width="50px">Curso Angular 19 - Curso Completo do Iniciante ao Avançado (2025)</a>                     
+            </div>
+        </form>     
+        <div class="linha"></div>
+</div>

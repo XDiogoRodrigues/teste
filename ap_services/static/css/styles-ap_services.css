@@ -1,0 +1,420 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+/* SECTION HEADER */
+
+.col-12 {
+    padding: 0;
+    margin: 0;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    padding-left: 30px;
+    background-image: 'ap_home/static/images/search.ico';
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+}
+
+.form-control:focus {
+    border-color:rgb(106, 39, 199);
+    box-shadow: 1px 1px 4px rgb(106, 39, 199);
+}
+
+
+.text-action {
+    font-size: 18px;
+}
+
+.btn-subscribe {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(106, 39, 199);
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid rgb(106, 39, 199);
+}
+
+.btn-login {
+    text-decoration: none;
+    color: rgb(106, 39, 199);
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid rgb(106, 39, 199);
+
+}
+
+.btn-login:hover {
+    color:rgb(106, 39, 199);
+    background-color: whitesmoke;
+}
+
+.btn-subscribe:hover {
+    background-color:rgb(106, 39, 199);
+    color: white;
+}
+
+.linha {
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.img-banner {
+    /* position: relative; */
+    width: 75%;
+    height: 95%;
+}
+
+.container-description-banner { 
+    width: 500px;
+    position: absolute;
+    left: 33%;
+    top: 25%;
+    transform: translateY(-20%);
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(212, 212, 212);
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: -3px 3px 10px rgb(163, 163, 163);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CAIXA DE PESQUISA */
+.form-search {
+    position: relative;
+}
+
+.container-search-word {
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+    top: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: whitesmoke;
+    border: 1px solid rgb(210, 210, 210);
+    z-index: 1;
+}
+
+/* SECTION HEADER MOBILE */
+
+.container-mobile {
+    max-width: 100%;
+    display: none;
+    align-items: center;
+    position: relative;
+}
+
+.list-items, .search-items, .cart-items {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.list-items {
+    padding: 1px 4px;
+}
+
+.img-icon {  
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.container-actions-mobile {
+    position: absolute;
+    left: 95%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* SECTION CONTAINER LOGIN */
+
+.container-login {
+    z-index: 1;
+    margin-top: 90px;
+}
+
+.service {
+    cursor: pointer;
+    border: 1px solid rgb(106, 39, 199);
+    border-radius: 8px;
+    
+}
+
+.link-login {
+    color:rgb(106, 39, 199);
+}
+
+.link-login:hover {
+    color: rgb(106, 39, 199);
+}
+
+
+/* CAIXA DE PESQUISA MOBILE */
+
+.container-search-mobile {
+    display: none;
+}
+
+.form-search-mobile {
+    display: none;
+}
+
+.btn-close-mobile {
+    cursor: pointer;
+    
+}
+
+.form-search {
+    position: relative;
+}
+
+.container-search-word {
+    height: 400px;
+    overflow-y: scroll;
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+    top: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: whitesmoke;
+    border: 1px solid rgb(210, 210, 210);
+    z-index: 1;
+}
+
+/* SECTION HEADER MOBILE */
+
+#container-search-mobile {
+    display: none;
+}
+
+.container-mobile {
+    max-width: 100%;
+    display: none;
+    align-items: center;
+    position: relative;
+}
+
+.list-items, .search-items, .cart-items {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.list-items {
+    padding: 1px 4px;
+}
+
+.img-icon {  
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.container-actions-mobile {
+    position: absolute;
+    left: 95%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* NAVEGATION CONTAINER MOBILE */
+
+.container-menu-mobile {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    background-color: rgb(230, 230, 230);
+    height: fit-content;
+    width: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    transition: ease-out 300ms;
+}
+
+/* SECTION CART */
+
+.container-cart {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.title-cart {
+    margin-left: 50px;
+    font-size: 65px;
+    
+}
+
+.subtitle-cart {
+    margin-left: 50px;
+    border-bottom: 1px solid rgb(214, 213, 213);
+}
+
+.container-cart-items {
+    margin-left: 50px;
+}
+
+.container-course-actions {
+    flex-direction: column;
+}
+
+.container-course-actions, .title-action {
+    color: rgb(106, 39, 199);
+}
+
+.title-description, .title-action {
+    font-size: 20px;
+}
+
+.container-course-price {
+    font-size: 28px;
+
+}
+
+.btn-next-cart {
+    letter-spacing: 1.5px;
+}
+
+.col-xl-3 .subtitle-cart {
+    display: none;
+}
+
+/* SECTION PAYMENT */
+
+.container-payment {
+    margin: 0 auto;
+}
+
+.container-payment-description {
+    justify-content: space-between;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.container-data-payment-form-pix, .container-data-payment-form-card, .container-data-payment-form-card-google, .container-data-payment-form-mercado, .container-data-payment-form-boleto {
+    display: none;
+}
+
+.container-payment-value {
+    height: fit-content;
+    background-color: rgb(229, 229, 229);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Elimina algum espaçamento extra */
+}
+
+/* Para navegadores Mozilla (Firefox) */
+input[type=number] {
+    -moz-appearance: textfield; /* Desativa as setas */
+}
+
+.container-payment-form {
+    width: 100%;
+}
+
+
+/* SECTION ENSINE NA UDEMY */
+
+.container-begin-teach-mobile {
+    display: none;
+}
+
+.banner-img {
+    margin: 0;
+    padding: 0;
+}
+
+.title-teach {
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container-teach-reasons {
+    gap: 200px;
+}
+
+.container-info {
+    background-color: rgb(106, 39, 199);
+    gap: 150px;
+}
+
+.container-info-geral {
+    gap: 100px;
+}
+
+
+.title-number {
+    font-size: 80px;
+}
+
+.action-step {
+    cursor: pointer;
+}
+
+.container-step-video, .container-step-course {
+    display: none;
+}
+
+.linha-grid {
+    border-bottom: 2px solid gray;
+    padding-bottom: 3px;
+}
+
+.content-grid {
+    padding: 8px;
+    border-top: 2px solid rgb(146, 146, 146);
+    border-bottom: 2px solid rgb(146, 146, 146);
+    margin-bottom: 10px;
+}
+
+.content-video {
+    padding: 8px;
+    border-top: 2px solid rgb(146, 146, 146);
+    border-bottom: 2px solid rgb(146, 146, 146);
+    margin-bottom: 10px;
+}
+
+.content-course {
+    padding: 8px;
+    border-top: 2px solid rgb(146, 146, 146);
+    border-bottom: 2px solid rgb(146, 146, 146);
+    margin-bottom: 10px;
+}
+
+.container-step-grid-mobile, .container-step-video-mobile, .container-step-course-mobile {
+    transition: ease-in 800ms;
+    display: none;
+}
+
+.card-list-mobile .list-item-mobile:active {
+    cursor: grabbing;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background:rgb(106, 39, 199);
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: rgb(178, 178, 178);
+    margin-top: -35px;
+}

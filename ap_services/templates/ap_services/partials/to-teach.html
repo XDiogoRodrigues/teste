@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block jquery %}<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>{% endblock %}
+{% block script %}<script src="{% static 'js/script-ap_services.js' %}" defer></script>{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/styles-ap_services.css' %}">{% endblock %}
+{% block media %}<link rel="stylesheet" href="{% static 'css/media_query-ap_services.css' %}">{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="container-fluid banner-img text-center">
+        <img src="{% static 'images/moca.webp' %}" alt="image-teacher" class="img-fluid " width="2400px" height="300px">
+        <h1 class="text-center title-teach fw-bold mb-5 mt-5">São muitos motivos para começar</h1>
+    </div>
+   
+    <section class="container mt-4">   
+        <div class="container-teach-reasons d-flex justify-content-center">
+            <div class="container-teach-content text-center mt-0 p-3">
+                <img src="{% static 'images/value-prop-teach.webp' %}" alt="" class="img-teach">
+                <p class="fs-5 fw-bold">Seu jeito de ensinar</p>
+                <p class="fs-5">Publique o curso que você quer, da maneira que achar melhor e sempre tenha controle do seu conteúdo.</p>
+            </div>
+
+            <div class="container-teach-content text-center mt-0 p-3">
+                <img src="{% static 'images/value-prop-inspire.webp' %}" alt="" class="img-inspire">
+                <p class="fs-5 fw-bold">Inspire alunos</p>
+                <p class="fs-5">Ensine o que você sabe e ajude os alunos a explorar seus interesses, adquirir novas habilidades e avançar na carreira.</p>
+            </div>
+
+            <div class="container-teach-content text-center mt-0 p-3">
+                <img src="{% static 'images/value-prop-teach.webp' %}" alt="" class="img-reward">
+                <p class="fs-5 fw-bold">Receba recompensas</p>
+                <p class="fs-5">Amplie sua rede profissional, desenvolva seu conhecimento e ganhe dinheiro com cada inscrição paga.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container-info container-fluid d-flex justify-content-center p-5">
+        <div class="container-info-geral d-flex justify-content-center">
+            <div class="container-info-content d-flex flex-column align-items-center">
+                <p class="title-number text-white mb-0">80M</p>
+                <p class="fs-3 text-white">Alunos</p>
+            </div>
+
+            <div class="container-info-content d-flex flex-column align-items-center">
+                <p class="title-number text-white mb-0">75+</p>
+                <p class="fs-3 text-white">Idiomas</p>
+            </div>               
+        </div>
+
+        <div class="container-info-geral d-flex justify-content-center  p-0">
+            <div class="container-info-content d-flex flex-column align-items-center">
+                <p class="title-number text-white mb-0">1.1B</p>
+                <p class="fs-3 text-white">Inscrições</p>
+            </div>
+
+            <div class="container-info-content d-flex flex-column align-items-center">
+                <p class="title-number text-white mb-0">180+</p>
+                <p class="fs-3 text-white">Países</p>
+            </div>               
+        </div>
+
+        <div class="container-info-geral d-flex justify-content-center  p-0">
+            <div class="container-info-content d-flex flex-column align-items-center">
+                <p class="title-number text-white mb-0">17.200+</p>
+                <p class="fs-3 text-white">Clientes empresariais</p>
+            </div>            
+        </div>
+    </section>
+
+    <section class="container container-begin-teach-desktop mt-5 mb-5">
+        <h1 class="text-center mb-5">Como começar</h1>
+        <div class="container-steps d-flex justify-content-center gap-5">
+            <div class="step-grid">
+                <span class="fs-3 action-step action-step-grid fw-bold">Planeje sua grade curricular</span>
+                <div class="linha-grid"></div>     
+            </div>
+
+            <div class="step-video">
+                <span class="fs-3 action-step action-step-video">Grave seu vídeo</span>
+                <div class="linha-video"></div>
+            </div>
+
+            <div class="step-course">
+                <span class="fs-3 action-step action-step-course">Lance seu curso</span>
+                <div class="linha-course"></div>
+            </div>  
+        </div>
+
+        <div class="container-step-grid d-flex align-items-center ms-5">
+            <p class="fs-4 w-50">Comece com o que você ama e conhece. Depois, escolha um tema promissor com a ajuda da nossa ferramenta Marketplace Insights.
+            A maneira como você ensina — o seu toque especial — fica a seu critério.
+            Como ajudamos você
+            Oferecemos muitos recursos sobre como criar seu primeiro curso. Além disso, o painel do instrutor e as páginas de grade curricular ajudam você a manter a organização.</p>
+            <img src="{% static 'images/grid.webp' %}" alt="" width="600px" height="500px">
+        </div>
+
+        <div class="container-step-video align-items-center ms-5">
+            <p class="fs-4 w-50">Use ferramentas básicas, como um smartphone ou uma câmera DSLR. Providencie um bom microfone e você já pode começar.
+            Se você não gosta de aparecer na câmera, basta capturar sua tela. Seja como for, recomendamos ter pelo menos duas horas de vídeo para um curso pago.
+            Como ajudamos você
+            Nossa equipe de suporte está à disposição para ajudar você no processo e oferecer feedback dos vídeos de teste.</p>
+            <img src="{% static 'images/moca-video.webp' %}" alt="" width="600px" height="500px">
+        </div>
+
+        <div class="container-step-course align-items-center ms-5">
+            <p class="fs-4 w-50">Promova seu curso em mídias sociais e redes profissionais para receber suas primeiras classificações e avaliações.
+            Seu curso poderá ser encontrado no nosso marketplace, onde você vai gerar receita com cada inscrição paga.
+            Como ajudamos você
+            Nossa ferramenta de cupom personalizado permite oferecer incentivos à inscrição, enquanto nossas promoções globais geram tráfego nos cursos. Existem ainda mais oportunidades para os cursos escolhidos para a Udemy Business.</p>
+            <img src="{% static 'images/moca-course.webp' %}" alt="" width="600px" height="500px">
+        </div>
+        <div class="container swiper">
+            <div class="card-wrapper mt-5">
+                <ul class="card-list swiper-wrapper">
+                    <li class="d-flex swiper-slide ">
+                        <img src="{% static 'images/diego.webp' %}" alt="" class="p-4" width="500px" height="600px">
+                        <div class="container-content-swiper mt-5">
+                            <p class="fs-2 w-75">« Com os meus cursos na Udemy tenho a possibilidade de impactar positivamente a vida de milhares de alunos no Brasil e no mundo. Isso permitiu que eu largasse meu emprego para trabalhar todos os dias com o que eu realmente amo. »</p>
+                            <p class="fs-5 fw-bold mb-2">Diego Davila</p>
+                            <p class="fs-5 text-secondary">Marketing Online</p>
+                        </div>
+                    </li>
+                    
+                    <li class="d-flex gap-5 swiper-slide">
+                        <img src="{% static 'images/felipe.webp' %}" alt="" class="p-4" width="500px" height="600px">
+                        <div class="container-content-swiper mt-5">
+                            <p class="fs-2 w-75">« Ensino na Udemy pois desfruto da liberdade de trabalhar de qualquer lugar, e dedicar o meu tempo livre a outras atividades. Tenho orgulho de trabalhar com o que amo e do impacto que meus cursos geram em inúmeros alunos. »</p>
+                            <p class="fs-5 fw-bold mb-2">Felipe Mafra</p>
+                            <p class="fs-5 text-secondary">Análise de Dados</p>
+                        </div>
+                    </li>
+
+                    <li class="d-flex gap-5 swiper-slide">
+                        <img src="{% static 'images/pilar.webp' %}" alt="" class="p-4" width="500px" height="600px">
+                        <div class="container-content-swiper mt-5">
+                            <p class="fs-2 w-75 mb-2">« Comecei na Udemy como um 'hobby' e, com o passar do tempo, consegui transformá-lo em uma profissão, e agora meu foco total é na Udemy. A liberdade que conquistei só foi possível porque na Udemy pude chegar em públicos que sozinha não teria a capacidade de atingir. »</p>
+                            <p class="fs-5 fw-bold">Pilar Sanchez Albaladejo</p>
+                            <p class="fs-5 text-secondary">Gestão de Projetos & Agile</p>
+                        </div>
+                    </li>
+
+                </ul>             
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>   
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container container-begin-teach-mobile mt-5 mb-5">
+        <h1 class="text-center mt-5">Como começar</h1>
+        <div class="container-steps d-flex flex-column gap-3">
+            <div class="content-grid">
+                <span class="fs-3 action-step action-step-grid-mobile d-block fw-bold">Planeje sua grade curricular</span>
+                <div class="container-step-grid-mobile">
+                    <img src="{% static 'images/grid.webp' %}" alt="" class="img-fluid">
+                    <p class="fs-4">Comece com o que você ama e conhece. Depois, escolha um tema promissor com a ajuda da nossa ferramenta Marketplace Insights.
+                    A maneira como você ensina — o seu toque especial — fica a seu critério.
+                    Como ajudamos você
+                    Oferecemos muitos recursos sobre como criar seu primeiro curso. Além disso, o painel do instrutor e as páginas de grade curricular ajudam você a manter a organização.</p>
+                </div>
+            </div>
+
+            <div class="content-video">
+                <span class="fs-3 action-step action-step-video-mobile d-block fw-bold">Grave seu vídeo</span>
+                <div class="container-step-video-mobile">
+                    <img src="{% static 'images/moca-video.webp' %}" alt="" class="img-fluid">
+                    <p class="fs-4">Use ferramentas básicas, como um smartphone ou uma câmera DSLR. Providencie um bom microfone e você já pode começar.
+                    Se você não gosta de aparecer na câmera, basta capturar sua tela. Seja como for, recomendamos ter pelo menos duas horas de vídeo para um curso pago.
+                    Como ajudamos você
+                    Nossa equipe de suporte está à disposição para ajudar você no processo e oferecer feedback dos vídeos de teste.</p>
+                </div>
+            </div>
+
+            <div class="content-course">
+                <span class="fs-3 action-step action-step-course-mobile d-block fw-bold">Lance seu curso</span>
+                <div class="container-step-course-mobile">
+                    <img src="{% static 'images/moca-course.webp' %}" alt="" class="img-fluid">
+                    <p class="fs-4">Promova seu curso em mídias sociais e redes profissionais para receber suas primeiras classificações e avaliações.
+                    Seu curso poderá ser encontrado no nosso marketplace, onde você vai gerar receita com cada inscrição paga.
+                    Como ajudamos você
+                    Nossa ferramenta de cupom personalizado permite oferecer incentivos à inscrição, enquanto nossas promoções globais geram tráfego nos cursos. Existem ainda mais oportunidades para os cursos escolhidos para a Udemy Business.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-mobile swiper mt-5">
+            <div class="card-wrapper mt-5">
+                <div class="card-list-mobile swiper-wrapper">
+                    <div class="list-item-mobile swiper-slide">
+                        <img src="{% static 'images/diego.webp' %}" alt="" class="img-fluid">
+                        <p class="fs-5">« Com os meus cursos na Udemy tenho a possibilidade de impactar positivamente a vida de milhares de alunos no Brasil e no mundo. Isso permitiu que eu largasse meu emprego para trabalhar todos os dias com o que eu realmente amo. »</p>
+                        <p class="fs-5 fw-bold mb-2">Diego Davila</p>
+                        <p class="fs-5 pb-3">Marketing Online</p>
+                    </div>
+                    <div class="list-item-mobile swiper-slide">
+                        <img src="{% static 'images/felipe.webp' %}" alt="" class="img-fluid">
+                        <p class="fs-5">« Ensino na Udemy pois desfruto da liberdade de trabalhar de qualquer lugar, e dedicar o meu tempo livre a outras atividades. Tenho orgulho de trabalhar com o que amo e do impacto que meus cursos geram em inúmeros alunos. »</p>
+                        <p class="fs-5 fw-bold mb-2">Felipe Mafra</p>
+                        <p class="fs-5 pb-3">Análise de Dados</p>
+                    </div>
+                    <div class="list-item-mobile swiper-slide">
+                        <img src="{% static 'images/pilar.webp' %}" alt="" class="img-fluid">
+                        <p class="fs-5">« Comecei na Udemy como um 'hobby' e, com o passar do tempo, consegui transformá-lo em uma profissão, e agora meu foco total é na Udemy. A liberdade que conquistei só foi possível porque na Udemy pude chegar em públicos que sozinha não teria a capacidade de atingir. »</p>
+                        <p class="fs-5 fw-bold mb-2">Pilar Sanchez Albaladejo</p>
+                        <p class="fs-5 pb-3">Gestão de Projetos & Agile</p>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>   
+            </div>
+        </div>
+    </section>
+{% endblock %}

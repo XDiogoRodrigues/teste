@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block jquery %}<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>{% endblock %}
+{% block script %}<script src="{% static 'js/script-ap_services.js' %}" defer></script>{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/styles-ap_services.css' %}">{% endblock %}
+{% block media %}<link rel="stylesheet" href="{% static 'css/media_query-ap_services.css' %}">{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <section class="container-cart">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <h1 class="title-cart text-start fw-bold mt-5 mb-4">Carrinho de compras</h1>
+                {% if quantity_courses > 1 %}
+                    <p class="subtitle-cart fw-bold fs-4 mb-1">{{quantity_courses}} cursos no carrinho</p>
+                {% elif quantity_courses == 1 %}
+                    <p class="subtitle-cart fw-bold fs-4 mb-1">{{quantity_courses}} curso no carrinho</p>
+                {% else %}
+                    <p class="subtitle-cart fw-bold fs-4 mb-1">Nenhum curso no carrinho</p>
+                {% endif %}
+            </div>
+              
+                {% if quantity_courses > 0 %}
+                <div class="col-md-9 col-12">
+                    {% for course in courses %}
+                        <div class="container-course-general ms-3">
+                            <div class="container-course-description-actions p-3 d-flex gap-3 me-5">
+                                <div class="container-course-image">
+                                    <a href="#">
+                                        <img src="{% static 'images/images_language_programing/html-5-logo.png' %}" alt="" class="img-fluid border rounded-3" width="160" height="150">
+                                    </a>     
+                                </div>
+                                <a href="#" class="ancora-course text-decoration-none text-dark d-flex gap-3">
+                                    <div class="container-course-description">
+                                        <h4>Algoritmos e Lógica de Programação - O Curso COMPLETO</h4>
+                                        <p class="title-description mb-2">Por Nelio Alves</p>
+                                        <p class="title-description mb-2"><span>Mais vendidos</span>&nbsp;&nbsp;<span class="text-warning">4.8</span>
+                                            <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+                                            (37.079 classificações)
+                                        </p>
+                                        <p class="title-description">30.5 horas no total | 248 aulas | Iniciante</p>
+                                        <span class="title-action">Remover</span>
+                                    </div>
+                                </a>
+                                
+                                <div class="container-course-price">
+                                    <p class="title-price fw-bold">R$&nbsp;24,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="col-xl-3 col-12">
+                   <p class="fs-1 fw-bold">Total:<br><span class="fs-1">R$&nbsp;24,90</span></p>
+                   <a href="{% url 'payment' %}" class="btn btn-subscribe fs-5 p-3 btn-next-cart">Prosseguir com a finalização&nbsp;<i class="bi bi-arrow-right"></i></a>
+                   <p class="text-secondary mt-2 fw-bold">Você não receberá nenhuma cobrança ainda</p>
+                    {% if quantity_courses > 1 %}
+                        <p class="subtitle-cart fw-bold fs-4 mb-1">{{quantity_courses}} cursos no carrinho</p>
+                    {% elif quantity_courses == 1 %}
+                        <p class="subtitle-cart fw-bold fs-4 mb-1">{{quantity_courses}} curso no carrinho</p>
+                    {% else %}
+                        <p class="subtitle-cart fw-bold fs-4 mb-1">Nenhum curso no carrinho</p>
+                    {% endif %}
+                </div>
+                   
+                {% else %}
+                    <div class="col-md-11 col-12 container-cart-items border p-3 text-center">
+                    <img src="{% static 'images/empty-cart.webp' %}" alt="logo-cart-empty" class="text-center" width="350px" height="300px">
+                    <p class="fs-4">Seu carrinho está vazio. Continue comprando para encontrar um curso!</p>
+                    <a href="{% url 'home' %}" class="btn btn-subscribe fs-5 mb-5">Continuar comprando</a>
+                    </div>
+                {% endif %}
+        </div>
+    </section>
+{% endblock %}
