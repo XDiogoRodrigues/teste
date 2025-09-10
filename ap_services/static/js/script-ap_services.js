@@ -220,6 +220,12 @@ $('.action-step-course').click(function(){
 
 $('.action-step-grid-mobile').click(function(){
     $(this).css('text-align', 'center')
+    $('.plan').removeClass('bi-caret-down-fill')
+    $('.plan').addClass('bi-caret-up-fill')
+    $('.course').removeClass('bi-caret-up-fill')
+    $('.course').addClass('bi-caret-down-fill')
+    $('.video').removeClass('bi-caret-up-fill')
+    $('.video').addClass('bi-caret-down-fill')
     $('.action-step-video-mobile').css('text-align', 'start')
     $('.action-step-course-mobile').css('text-align', 'start')
     $('.container-step-grid-mobile').css('display', 'block')
@@ -229,6 +235,12 @@ $('.action-step-grid-mobile').click(function(){
 
 $('.action-step-video-mobile').click(function(){
     $(this).css('text-align', 'center')
+    $('.video').removeClass('bi-caret-down-fill')
+    $('.video').addClass('bi-caret-up-fill')
+    $('.plan').removeClass('bi-caret-up-fill')
+    $('.plan').addClass('bi-caret-down-fill')
+    $('.course').removeClass('bi-caret-up-fill')
+    $('.course').addClass('bi-caret-down-fill')
     $('.action-step-grid-mobile').css('text-align', 'start')
     $('.action-step-course-mobile').css('text-align', 'start')
     $('.container-step-video-mobile').css('display', 'block')
@@ -238,6 +250,12 @@ $('.action-step-video-mobile').click(function(){
 
 $('.action-step-course-mobile').click(function(){
     $(this).css('text-align', 'center')
+    $('.course').removeClass('bi-caret-down-fill')
+    $('.course').addClass('bi-caret-up-fill')
+    $('.plan').removeClass('bi-caret-up-fill')
+    $('.plan').addClass('bi-caret-down-fill')
+    $('.video').removeClass('bi-caret-up-fill')
+    $('.video').addClass('bi-caret-down-fill')
     $('.action-step-video-mobile').css('text-align', 'start')
     $('.action-step-grid-mobile').css('text-align', 'start')
     $('.container-step-course-mobile').css('display', 'block')
