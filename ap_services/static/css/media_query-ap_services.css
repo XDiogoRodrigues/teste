@@ -148,4 +148,12 @@
           display: none;
      }
 
+     .become-instructor {
+          display: none;
+     }
+
+     .become-instructor-mobile {
+          display: block;
+     }
+
 }

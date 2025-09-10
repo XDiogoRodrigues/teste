@@ -418,3 +418,26 @@ input[type=number] {
     color: rgb(178, 178, 178);
     margin-top: -35px;
 }
+
+/* SECTION BECOME-INSTRUCTOR */
+
+.become-instructor {
+    margin-top: 130px;
+    background-color: rgb(226, 226, 226);
+}
+
+.become-instructor .title {
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.become-instructor p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.become-instructor-mobile {
+    margin-top: 50px;
+    background-color: rgb(226, 226, 226);
+    display: none;
+}
