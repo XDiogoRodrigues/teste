@@ -17,6 +17,14 @@
                     {% csrf_token %}
                     <fieldset>
                         <h1 class="text-center mb-4">Faça login para continuar sua jornada de aprendizado</h1>
+                        {% for message in messages %}
+                          {% if message.level == 40 %}
+                            <div class="alert alert-danger alert-dismissible fade show text-center pt-2 pb-2" role="alert">
+                                <p class="fs-5 text-center fw-bold text-dark">{{message}}</p>
+                                <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
                     </fieldset>
                      <div class="form-floating mb-4">
                         <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
@@ -27,7 +35,7 @@
                         <input type="password" class="form-control" name="password" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput" class="fw-bold">Senha</label>
                     </div>
-                    <input type="submit" value="Continuar com e-mail" class="btn-subscribe form-control">
+                    <input type="submit" value="Login" class="btn-subscribe form-control">
                 </form>
 
                 <p class="text-center mt-3">Outras opções de login</p>
@@ -44,5 +52,5 @@
             </div>
         </div>
     </section>
-    
+    {% include 'footer.html' %}
 {% endblock %}

@@ -23,10 +23,25 @@
                </div>
 
                <div class="container-actions d-flex gap-3 align-items-center me-3">
-                    <a href="{% url 'to-teacher' %}" class="text-decoration-none text-dark text-action">Ensine na Udemy</a>
-                    <a href="{% url 'cart' %}"><i class="bi bi-cart3 text-dark fs-4"></i></a>
-                    <a href="{% url 'login' %}" class="btn-login">Fazer login</a>
+                    {% if user.is_authenticated %}
+                      <a href="{% url 'to-teacher' %}" class="text-decoration-none text-dark text-action">Ensine na Udemy</a>
+                      <a href="#" class="text-decoration-none text-dark text-action">Meus aprendizado</a>
+                      <a href="{% url 'cart' %}"><i class="bi bi-cart3 text-dark fs-4"></i></a>
+                      <div class="dropdown">
+                        <button class="fs-5 border bg-white p-2" type="button" style="border-radius: 50%;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          {{user.first_name|slice:":1"}}{{user.last_name|slice:":1"}}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Dados Pessoais</a></li>
+                          <li><a class="dropdown-item" href="#">Lista de desejos</a></li>
+                          <li><a class="dropdown-item" href="{% url 'logout' %}">Sair</a></li>
+                        </ul>
+                      </div>
+                    {% else %}
+                    <a href="{% url 'login_user_aplication' %}" class="btn-login">Fazer login</a>
                     <a href="{% url 'register' %}" class="btn-subscribe">Inscreva-se</a>
+                    <a href="{% url 'cart' %}"><i class="bi bi-cart3 text-dark fs-4"></i></a>
+                    {% endif %}
                     <a href="#" class="btn-login"><i class="bi bi-globe p-1 text-dark"></i></a>
                </div>
             </div>
@@ -45,7 +60,7 @@
 
         <div class="container-menu-mobile p-4">
             <div class="container-mobile-me d-flex flex-column align-items-start mb-2">
-                <a href="{% url 'login' %}" class="fs-5 mb-2 text-decoration-none text-dark">Fazer login</a>
+                <a href="{% url 'login_user_aplication' %}" class="fs-5 mb-2 text-decoration-none text-dark">Fazer login</a>
                 <a href="{% url 'register' %}" class="fs-5 mb-2 text-decoration-none text-dark">Inscreva-se</a>
             </div>
 

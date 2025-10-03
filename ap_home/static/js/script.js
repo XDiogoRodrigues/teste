@@ -83,3 +83,74 @@ $('.list-items').click(function (){
    
 })
 
+
+$('.container-off').click(function (){
+    let sizeWindow = window.innerWidth;
+    console.log(sizeWindow)
+    $(this).css('border-bottom', 'none')
+    let text = $(this).text()
+   
+    if(text == "Carreiras em alta " && sizeWindow <= 767){
+        $('.container-carreer-profission').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+    
+
+    } else if(text == "Desenvolvimento Web " && sizeWindow <= 767){
+        $('.container-carreer-web').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+
+    } else if(text == "Certificações de TI " && sizeWindow <= 767){
+        $('.container-carreer-TI').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+
+    }else if(text == 'Liderança ' && sizeWindow <= 767){
+        $('.container-carreer-leader').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+    }
+
+})
+

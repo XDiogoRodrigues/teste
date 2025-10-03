@@ -67,7 +67,6 @@ $(window).resize(function (){
 
 $(window).resize(function() {
     let sizeWindow = window.innerWidth
-    console.log(sizeWindow)
 
     if(sizeWindow <= 800){
         $('.img-service').attr('src', '/static/images/image-register.webp')
@@ -136,7 +135,6 @@ if (sizeWindowCart <= 1150){
 
 $('input[type="radio"]').on('change', function (){
     let id = $(this).attr('id')
-    console.log(id)
     if( id === 'card'){
         $('.container-data-payment-form-pix').css('display', 'none')
         $('.container-data-payment-form-card').css('display', 'block')
@@ -153,7 +151,6 @@ $('input[type="radio"]').on('change', function (){
         $('.container-data-payment-form-card-mercado').css('display', 'none')
 
     }else if(id === 'card-google'){
-        console.log('3')
         $('.container-data-payment-form-card-google').css('display', 'block')
         $('.container-data-payment-form-pix').css('display', 'none')
         $('.container-data-payment-form-card').css('display', 'none')
@@ -161,7 +158,6 @@ $('input[type="radio"]').on('change', function (){
         $('.container-data-payment-form-card-mercado').css('display', 'none')
         
     }else if(id === 'boleto'){
-        console.log('4')
         $('.container-data-payment-form-boleto').css('display', 'block')
         $('.container-data-payment-form-card-google').css('display', 'block')
         $('.container-data-payment-form-pix').css('display', 'none')
@@ -293,3 +289,106 @@ new Swiper('.card-wrapper', {
     }
   }
 });
+
+
+// SECTION FOOTER
+
+$('.container-off').click(function (){
+    let sizeWindow = window.innerWidth;
+    console.log(sizeWindow)
+    $(this).css('border-bottom', 'none')
+    let text = $(this).text()
+   
+    if(text == "Carreiras em alta " && sizeWindow <= 767){
+        $('.container-carreer-profission').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+    
+
+    } else if(text == "Desenvolvimento Web " && sizeWindow <= 767){
+        $('.container-carreer-web').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+
+    } else if(text == "Certificações de TI " && sizeWindow <= 767){
+        $('.container-carreer-TI').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-leader').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-leader').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-leader').find('i').addClass('bi-caret-down-fill')
+
+    }else if(text == 'Liderança ' && sizeWindow <= 767){
+        $('.container-carreer-leader').css({'display' : 'flex', 'border-bottom': '1px solid white', 'padding-bottom': '20px', 'padding-left': '10px'})
+        $('.container-carreer-web').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-TI').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-carreer-profission').css({'display': 'none', 'border-bottom': 'none'})
+        $('.container-off').css('border-bottom','2px solid white')
+        $(this).find('i').removeClass('bi-caret-down-fill')
+        $(this).find('i').addClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-web').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-TI').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-TI').find('i').addClass('bi-caret-down-fill')
+        $('.container-off-profission').find('i').removeClass('bi-caret-up-fill')
+        $('.container-off-profission').find('i').addClass('bi-caret-down-fill')
+    }
+
+})
+
+
+let sizeWindowService = window.innerWidth;
+
+
+if(sizeWindowService <= 767){
+    $('.container-finally-footer').removeClass('ms-5')
+    $('.logo-udemy-footer').removeClass('ms-5')
+    $('.p-footer').removeClass('text-center') 
+}else {
+    $('.p-footer').addClass('text-center')
+    $('.container-finally-footer').addClass('ms-5')
+    $('.logo-udemy-footer').addClass('ms-5')
+}
+
+$(window).resize(function(element){
+    let sizeWindowResize = window.innerWidth
+
+    if(sizeWindowResize <= 767){
+        $('.p-footer').removeClass('text-center')
+        $('.container-finally-footer').removeClass('ms-5')
+        $('.logo-udemy-footer').removeClass('ms-5')
+    }else{
+        $('.p-footer').addClass('text-center')
+        $('.container-finally-footer').addClass('ms-5')
+        $('.logo-udemy-footer').addClass('ms-5')
+    }
+})
+ 
+

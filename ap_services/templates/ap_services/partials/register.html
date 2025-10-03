@@ -17,10 +17,23 @@
                     {% csrf_token %}
                     <fieldset>
                         <h1 class="text-center mb-4">Cadastrar-se com e-mail</h1>
+                         {% for message in messages %}
+                            {% if message.level == 20 %}
+                                <div class="alert alert-warning alert-dismissible fade show text-center pt-2 pb-2" role="alert">
+                                    <p class="fs-5 text-center fw-bold text-dark">{{message}}</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
 
                         <div class="form-floating mb-4">
-                            <input type="email" class="form-control" name="name" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput" class="fw-bold">Nome completo</label>
+                            <input type="text" class="form-control" name="first_name" id="floatingInput" placeholder="Nome">
+                            <label for="floatingInput" class="fw-bold">Nome</label>
+                         </div>
+
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" name="last_name" id="floatingInput" placeholder="Sobrenome">
+                            <label for="floatingInput" class="fw-bold">Sobrenome</label>
                          </div>
 
                         <div class="form-floating mb-4">
@@ -33,11 +46,8 @@
                             <label for="floatingInput" class="fw-bold">Senha</label>
                         </div>
 
-                    </fieldset>
-                    
-
-                   
-                    <input type="submit" value="Continuar com e-mail" class="btn-subscribe form-control">
+                    </fieldset>   
+                    <input type="submit" value="Registrar" class="btn-subscribe form-control">
                 </form>
 
                 <p class="text-center mt-3">Outras opções de login</p>
@@ -48,9 +58,9 @@
                     <img src="{% static 'images/images_actions_login/mac.ico' %}" alt=""  class=" service p-2 mb-3" width="50px" height="50px">
                 </div>
                 
-                <p class="text-center mt-3 fs-5">Já tem uma conta?<a href="{% url 'login' %}" class=" text-center fs-5 link-login"> Fazer login</a></p>
+                <p class="text-center mt-3 fs-5">Já tem uma conta?<a href="{% url 'login_user_aplication' %}" class=" text-center fs-5 link-login"> Fazer login</a></p>
             </div>
         </div>
     </section>
-    
+    {% include 'footer.html' %}
 {% endblock %}

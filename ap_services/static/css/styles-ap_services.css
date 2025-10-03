@@ -441,3 +441,54 @@ input[type=number] {
     background-color: rgb(226, 226, 226);
     display: none;
 }
+
+
+/* SECTION FOOTER */
+
+.container-footer {
+    color: white;
+    background-color: #2a2b3f;
+}
+
+.container-enterprise {
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+}
+
+.container-carreer {
+    background-color: #2a2b3f;
+}
+
+.container-carreer p .bi-caret-down-fill {
+    display: none;
+}
+
+.container-carreer-profission, .container-carreer-web, .container-carreer-TI, .container-carreer-leader {
+    display: flex;
+}
+
+.container-get-know-udemy {
+    background-color: #202230;
+}
+
+.container-get-know-udemy .col-12 {
+    margin-top: 30px;
+}
+
+.row-finally-footer {
+    border-top:1px solid white;
+}
+
+/* Estilização button de fechar do formulário de login e registro */
+
+.btn-close:active {
+    border: none;
+    border-color: transparent;
+    
+}
+
+.btn-close:focus {
+    border: none;
+    border-color: transparent;
+    
+}

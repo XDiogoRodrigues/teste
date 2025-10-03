@@ -104,6 +104,29 @@
 
      }
 
+     /* SECTION FOOTER */
+
+     .container-footer {
+          text-align: center;
+     }
+
+     .container-enterprise {
+          flex-direction: column;
+     }
+
+     .container-enterprise-img {
+          justify-content: center;
+          margin: 20px 0 30px 50px;
+     }
+
+     .container-certification-1 {
+          flex-direction: column;
+     }
+
+     .container-career, .container-developer-web, .container-certification-TI, .container-certification-leader {
+          display: none;
+     }
+
 }
 
 @media (max-width: 550px){
@@ -115,6 +138,16 @@
      .title-payment {
           letter-spacing: 1.5px;
           text-align: center;
+     }
+
+     /* SECTION FOOTER */
+
+     .img-enterprise {
+          width: 90px;
+     }
+
+     .container-footer {
+          text-align: start;
      }
 }
 
@@ -155,5 +188,42 @@
      .become-instructor-mobile {
           display: block;
      }
+
+}
+
+@media (max-width: 767px) {
+     .container-carreer-profission, .container-carreer-web, .container-carreer-TI, .container-carreer-leader {
+          display: none;
+          margin-left: 20px;
+     }
+     
+     .container-get-know-udemy .col-12 {
+          padding-left: 30px;
+     }
+
+     .container-carreer .col-12 p {
+          position: relative;
+          cursor: pointer;
+          padding-left: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgb(255, 255, 255);
+     }
+
+     .container-carreer p .bi-caret-down-fill {
+          display: inline;
+          position: absolute;
+          top: 35%;
+          left: 95%;      
+     }
+
+     .container-carreer p .bi-caret-up-fill {
+          display: inline;
+          position: absolute;
+          top: 35%;
+          left: 95%;      
+     }
+
+ 
 
 }

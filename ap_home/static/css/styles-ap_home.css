@@ -186,4 +186,37 @@ body {
     height: 400px;
 }
 
+/* SECTION FOOTER */
+
+.container-footer {
+    color: white;
+    background-color: #2a2b3f;
+}
+
+.container-enterprise {
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+}
+
+.container-carreer {
+    background-color: #2a2b3f;
+}
+
+.container-carreer p .bi-caret-down-fill {
+    display: none;
+}
+
+.container-carreer-profission, .container-carreer-web, .container-carreer-TI, .container-carreer-leader {
+    display: flex;
+}
+
+.container-get-know-udemy {
+    background-color: #0e0e14;
+}
+
+.container-get-know-udemy .col-12 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 
